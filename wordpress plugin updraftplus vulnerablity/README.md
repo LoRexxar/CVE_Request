@@ -1,10 +1,10 @@
-﻿# wordpress plugin updraftplus vulnerablity
+# wordpress plugin updraftplus vulnerablity
 
 标签（空格分隔）： 未分类
 
 ---
 
-# authentiicated upload file and php code execution #
+# authenticated  upload file and php code execution #
 
 file `/wp-content/plugins/updraftplus/admin.php` line 1843 function `plupload_action`
 
@@ -36,7 +36,7 @@ via upload this file, and view this pages before delete, we can write a a.php in
 
 ![image.png-172.5kB][5]
 
-# authentiicated ssrf #
+# authenticated ssrf #
 
 file `/wp-content/plugins/updraftplus/admin.php` line 1233 function updraft_ajax_handler 
 
@@ -64,7 +64,7 @@ use fetch(curl)
 ![image.png-20.9kB][9]
 
 
-## authentiicated reflected xss ##
+## authenticated reflected xss ##
 
 管理员权限
 ```
