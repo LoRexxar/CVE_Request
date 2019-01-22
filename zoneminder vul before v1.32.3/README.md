@@ -7,6 +7,8 @@
 The following vulnerability information comes from the zoneminder release version is probably 1.32.0, the code structure has changed in 1.32.3, some of the code has changed, but the following vulnerabilities have not been fixed, need to find in 1.32.3 Corresponding code location and not absolutely the following description location
 
 
+The progress of these vulnerabilities  [https://github.com/ZoneMinder/zoneminder/issues/2399](https://github.com/ZoneMinder/zoneminder/issues/2399) is constantly being updated.
+
 # skins/classic/views/events.php line 44 sql injection
 
 ```
