@@ -2,7 +2,7 @@
 
 ---
 
-# Reflective xss  in /access/setup?type-conn
+# Stored xss  in /access/setup?type-conn
 
 in /access/setup?type-conn, in connection name，parameter name will be injected into HTML content with out any filter
 
@@ -24,7 +24,7 @@ and if we set tag=`../test`，and we will create a test.csv in `\WebPort\system\
 
 ![image.png-48.3kB][3]
 
-# Reflective xss  in /script/listcalls
+# Stored xss  in /script/listcalls
 
 in /script/listcalls, in new called script, the description will be injected into HTML content with out any filter.
 
@@ -36,7 +36,7 @@ type=callscript&id=test&desc=test%3Cimg+src%3D%2F+onerror%3Dalert(1)%3E
 
 ![image.png-50.5kB][4]
 
-# POST Reflective xss and SQL injection in  /log?type=error
+# POST Stored xss and SQL injection in  /log?type=error
 
 in /access/setup?type-conn, in connection name，parameter name will be injected into HTML content with out any filter.
 
